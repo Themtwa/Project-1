@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Sports Simplified</title>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
-</head>
+  <head>
+    <title>Sports Simplified</title>
 
-<body>
-  <div class="container">
-    <div class="jumbotron">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
       <h1 class="card-title">Scores</h1>
       <br>
       <div class="row">
-        <a class="col-sm-2" href="#">NFL</a>
-        <a class="col-sm-2" href="#">NBA</a>
-        <a class="col-sm-2" href="#">MLB</a>
-        <a class="col-sm-2" href="#">NHL</a>
-        <a class="col-sm-2" href="#">NCAAF</a>
-        <a class="col-sm-2" href="#">NCAAB</a>
-      </div>
+      <a class="col-sm-2" href="nlf.html">NFL</a>
+      <a class="col-sm-2" href="nba.html">NBA</a>
+      <a class="col-sm-2" href="mlb.html">MLB</a>
+      <a class="col-sm-2" href="nhl.html">NHL</a>
+      <a class="col-sm-2" href="ncaaf.html">NCAAF</a>
+      <a class="col-sm-2" href="ncaab.html">NCAAB</a>
     </div>
-  </div>
-</body>
-<!-- Jquery -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <!-- Javascript -->
-  <script src="./assets/javascript/sports.js"></script>
-</body>
+    </div>
+    </div>
 
+    <div id="events" class>
+      <h2 class="date-heading js-show">...</h2>
+      <article class="scoreboard football js-show" id="..." data-awayID="..." data-homeID="...">
+        <table>
+          <thead>
+            <tr class="lineScore">
+              <th class="date-time">...</th>
+              <th class="score">1</th>
+              <th class="score">2</th>
+              <th class="score">3</th>
+              <th class="score">4</th>
+              <th class="total">T</th>
+            </tr>
+          </thead>
+          <tbody id="teams">
+            <tr class="away">
+              <td class="score">...</td>
+              <td class="score">...</td>
+              <td class="score">...</td>
+              <td class="score">...</td>
+              <td class="total">...</td>
+            </tr>
+            <tr class="home">
+                <td class="score">...</td>
+                <td class="score">...</td>
+                <td class="score">...</td>
+                <td class="score">...</td>
+                <td class="total">...</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+
+    <script src="assets/javascript/sports.js"></script>
+  </body>
 </html>

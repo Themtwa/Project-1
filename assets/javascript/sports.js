@@ -41,7 +41,7 @@ $.ajax({
     console.log(response)
     // loops through the games
     response.week.games.forEach(element => {
-        console.log(element)
+        //console.log(element)
 
         var city = element.venue.city
         var queryURL2 = "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=e29ea1b3f3abb4e7a3da0066b8afbb2e"
@@ -51,10 +51,22 @@ $.ajax({
             method: "GET",
             async: false
         }).done(function (response) {
-            //logging weather for each game
-            console.log(response)
-            //create div
-            //populate div with game score and weather
+            //logging weather for each game (working just need to uncomment after finishing other weather results)
+            var tempAsF = ((response.main.temp - 273.15) * 1.80 + 32)
+            var roundTemp = tempAsF.toFixed(2)
+            // console.log(roundTemp)
+            //console.log(response.weather[0].description)
+            //console.log(response)
+            
+                var weatherDiv = $('<div>');
+                var tempF = $('<p>').text('F: ' + roundTemp);
+                var weather = $('<p>').text ('Weather: ' + response.weather[0].description);
+                var wind = $('<p>').text('Wind speed: ' + response.wind.speed + ' m/s')
+                weatherDiv.append(tempF);
+                weatherDiv.append(weather)
+                weatherDiv.append(wind)
+                $('.test-div').append(weatherDiv);
+            
         });
 
     });

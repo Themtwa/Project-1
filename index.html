@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Sports Simplified</title>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<head>
+  <title>Sports Simplified</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-  </head>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-  <body>
-    <div class="container">
-      <div class="jumbotron">
+  <!-- Font Style-->
+  <link href="https://fonts.googleapis.com/css?family=Graduate&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
       <h1 class="card-title">Scores</h1>
       <br>
       <div class="row">
-      <a class="col-sm-2" href="nlf.html">NFL</a>
-      <a class="col-sm-2" href="nba.html">NBA</a>
-      <a class="col-sm-2" href="mlb.html">MLB</a>
-      <a class="col-sm-2" href="nhl.html">NHL</a>
-      <a class="col-sm-2" href="ncaaf.html">NCAAF</a>
-      <a class="col-sm-2" href="ncaab.html">NCAAB</a>
+        <a class="col-sm-2" href="nlf.html">NFL</a>
+        <a class="col-sm-2" href="nba.html">NBA</a>
+        <a class="col-sm-2" href="mlb.html">MLB</a>
+        <a class="col-sm-2" href="nhl.html">NHL</a>
+        <a class="col-sm-2" href="ncaaf.html">NCAAF</a>
+        <a class="col-sm-2" href="ncaab.html">NCAAB</a>
+      </div>
     </div>
-    </div>
-    </div>
+  </div>
 
-    <div id="events" class>
-      <h2 class="date-heading js-show">...</h2>
-      <article class="scoreboard football js-show" id="..." data-awayID="..." data-homeID="...">
-        <table>
-          <thead>
-            <tr class="lineScore">
-              <th class="date-time">...</th>
-              <th class="score">1</th>
-              <th class="score">2</th>
-              <th class="score">3</th>
-              <th class="score">4</th>
-              <th class="total">T</th>
-            </tr>
-          </thead>
-          <tbody id="teams">
-            <tr class="away">
-              <td class="score">...</td>
-              <td class="score">...</td>
-              <td class="score">...</td>
-              <td class="score">...</td>
-              <td class="total">...</td>
-            </tr>
-            <tr class="home">
-                <td class="score">...</td>
-                <td class="score">...</td>
-                <td class="score">...</td>
-                <td class="score">...</td>
-                <td class="total">...</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-    </div>
+  <div class="container">
+    <!-- NFL game's -->
+    <div class="col-lg-12">
+      <div class="panel" style="margin-top: 35%">
+        <div class="panel-heading" style="background-color: #0f3854">
+          <h3 class="panel-title" style="color: white; font-family: 'Graduate', monospace;">Current Week</h3>
 
-    <script src="assets/javascript/sports.js"></script>
-  </body>
+          <table id="Schedule" class="table table-striped table-bordered" cellspacing="0" width="100%"
+            style="background-color: #6b8299">
+            <thead>
+              <tr>
+                <td>Schedule</td>
+              </tr>
+              <tr>
+                <td>Home</td>
+              </tr>
+              <tr>
+                <td>Away</td>
+              </tr>
+              <tr>
+                <td>Home Points</td>
+                <td>Away Points</td>
+              </tr>
+              
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Graduate -->
+
+      <script src="assets/javascript/sports.js"></script>
+</body>
+
 </html>

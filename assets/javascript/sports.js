@@ -32,37 +32,31 @@ var teams = [
     "Tennessee Titans",
     "Washington Redskins",
 ];
-var queryURL = "https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nfl/official/trial/v5/en/games/2019/REG/9/schedule.json?api_key=zjdgsqf346kgnng7vy4fa4ss";
-
-// function displayTeamInfo() {
-
-//     var team = $(this).attr("data-name");
-
-//     var queryURL = "https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nfl/official/trial/v5/en/games/2019/REG/1/schedule.json?api_key=zjdgsqf346kgnng7vy4fa4ss";
-
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).done(function (response) {
-//         console.log(response)
-
-//     });
-//     var teamDiv = $("<div class='team'>");
-
-//     var nothing = 'nothing'
-
-// };
-
+var queryURL = "https://cors-anywhere.herokuapp.com/https://api.sportradar.us/nfl/official/trial/v5/en/games/2019/REG/06/schedule.json?api_key=zjdgsqf346kgnng7vy4fa4ss";
 
 $.ajax({
     url: queryURL,
     method: "GET"
 }).done(function (response) {
     console.log(response)
-   
-   response.week.games.forEach(element => {
-       console.log(element)
-       
-   });
+    // loops through the games
+    response.week.games.forEach(element => {
+        console.log(element)
+
+        var city = element.venue.city
+        var queryURL2 = "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=e29ea1b3f3abb4e7a3da0066b8afbb2e"
+
+        $.ajax({
+            url: queryURL2,
+            method: "GET",
+            async: false
+        }).done(function (response) {
+            //logging weather for each game
+            console.log(response)
+            //create div
+            //populate div with game score and weather
+        });
+
+    });
 
 });
